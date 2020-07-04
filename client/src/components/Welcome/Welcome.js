@@ -7,12 +7,16 @@ function Welcome(props) {
             Welcome Screen with login and signin buttons
             {/* onclick for buttons will be loginMethod or signinMethod */}
             <button onClick={
-                console.log("test button")} //this worked - but not on click
-                // props.signinMethod}
-                >Sign in (placeholder test button)</button>
+                props.signinMethod} 
+            >Sign in (placeholder test button)
+            </button>
+            <button onClick={
+                props.loginMethod}
+            >Log in (placeholder test button)
+             </button>
         </div>
     );
-    }
+}
 
-    export default Welcome;
+export default Welcome;
 

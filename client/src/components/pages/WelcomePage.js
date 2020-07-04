@@ -13,23 +13,25 @@ welcome: "welcome"
 }
 
 
-signinMethod(event){
+signinMethod = (event) => {
     console.log("sign in button");
     this.setState({welcome: "signin"})
+    // this will likely need to go thru authorization and api calls and such
 }
-loginMethod(event){
+loginMethod = (event) => {
+    console.log("sign in button");
     this.setState({welcome: "login"})
+        // this will likely need to go thru authorization and api calls and such
 }
 
 
 
 
 setWelcomeState(){
-switch(this.state){
+switch(this.state.welcome){
     case "welcome": return <Welcome 
-        loginMethod={console.log("this should be a method that changes state on button click")}
-        signinMethod={this.signinMethod}
-        
+        loginMethod={this.loginMethod}
+        signinMethod={this.signinMethod}     
         />;
     case "signin": return <Signin />;
     case "login": return <Login />;
